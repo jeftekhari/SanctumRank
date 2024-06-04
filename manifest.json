@@ -3,8 +3,8 @@
   "name": "Sanctum Rank Checker",
   "version": "1.0",
   "description": "Check your Sanctum Rank!",
-  "permissions": ["activeTab", "storage"],
-  "browser_action": {
+  "permissions": [ "storage"],
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
