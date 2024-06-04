@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wallet Checker</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+    .icon-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 10px;
+    }
+    .icon-button img {
+      width: 48px;
+      height: 48px;
+    }
+    input[list] {
+      position: relative;
+      width: 100%;
+    }
+    input::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <button class="icon-button" onclick="window.open('https://app.sanctum.so/wonderland', '_blank')">
+        <img src="icons/icon128.png" alt="Link Icon">
+        <h1 class="h4">Rank Checker</h1>
+      </button>
+    </div>
+    <div class="form-group">
+      <label for="wallet-address">Select or Enter Wallet Address:</label>
+      <input type="text" id="wallet-address" class="form-control" list="wallets" placeholder="Enter wallet address">
+      <datalist id="wallets">
+        <!-- Options will be populated by JavaScript -->
+      </datalist>
+    </div>
+    <button id="check-wallet" class="btn btn-primary btn-block">Check Wallet</button>
+    <div id="results" class="mt-4">
+      <p id="totalExp"></p>
+      <p id="globalRank"></p>
+      <p id="referralLevel"></p>
+    </div>
+    <h4 id="pets-listheader" hidden="true">Owned Pets</h4>
+    <ul id="pets-list" class="pet-grid">
+  </div>
+  <!-- Include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="src/storage.js"></script>
+  <script src="src/fetchData.js"></script>
+  <script src="src/domManipulation.js"></script>
+  <script src="src/popup.js"></script>
+</body>
+</html>
